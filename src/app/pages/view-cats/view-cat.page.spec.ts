@@ -2,20 +2,20 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
-import { ViewMessagePageRoutingModule } from './view-message-routing.module';
-import { ViewMessagePage } from './view-message.page';
+import { ViewMessagePageRoutingModule } from './view-cat-routing.module';
+import { ViewCatPage } from './view-cat.page';
 
 describe('ViewMessagePage', () => {
-  let component: ViewMessagePage;
-  let fixture: ComponentFixture<ViewMessagePage>;
+  let component: ViewCatPage;
+  let fixture: ComponentFixture<ViewCatPage>;
 
   beforeEach(async () => {
     TestBed.configureTestingModule({
-      declarations: [ViewMessagePage],
+      declarations: [ViewCatPage],
       imports: [IonicModule.forRoot(), ViewMessagePageRoutingModule, RouterModule.forRoot([])]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ViewMessagePage);
+    fixture = TestBed.createComponent(ViewCatPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

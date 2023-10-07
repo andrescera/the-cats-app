@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ViewMessagePage } from './view-message.page';
+import { ViewCatPage } from './view-cat.page';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ViewMessagePageRoutingModule } from './view-message-routing.module';
+import { ViewCatPageRoutingModule } from './view-cat-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ViewMessagePageRoutingModule
+    ViewCatPageRoutingModule
   ],
-  declarations: [ViewMessagePage]
+  declarations: [ViewCatPage]
 })
-export class ViewMessagePageModule {}
+export class ViewCatPageModule {}

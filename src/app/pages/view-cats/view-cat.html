@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [text]="getBackButtonText()" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="cat">
+  <img *ngIf="cat.imageUrl!== undefined; else elseBlock" [src]="cat.imageUrl"
+       alt="There was a problem loading the image">
+  <ng-template #elseBlock>The API does not provide any image to render</ng-template>
+
+  <ion-item>
+    <ion-label class="ion-text-wrap">
+      <h2>{{ cat.breedName }}</h2>
+    </ion-label>
+  </ion-item>
+
+  <div class="ion-padding">
+    <h1>{{ cat.origin }}</h1>
+    <p>
+      {{cat.description}}
+    </p>
+  </div>
+
+  <div class="ion-padding">
+    <h1> Stats </h1>
+    <p>
+      <strong>Affection level:</strong> {{cat.affectionLevel}}
+    </p>
+    <p>
+      <strong>Intelligence level:</strong> {{cat.intelligence}}
+    </p>
+  </div>
+</ion-content>

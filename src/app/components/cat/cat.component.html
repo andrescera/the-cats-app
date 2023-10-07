@@ -1,0 +1,17 @@
+<ion-card *ngIf="cat && index" [routerLink]="'/cat/' + index">
+  <img *ngIf="cat.imageUrl !== undefined;  else elseBlock" [src]="cat.imageUrl"
+       alt="There was a problem loading the image">
+  <ng-template #elseBlock>The API does not provide any image to render</ng-template>
+
+  <ion-card-header>
+    <ion-card-subtitle>Tap to see details</ion-card-subtitle>
+
+    <ion-card-title>{{cat.breedName}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <p><strong>Origin Counter:</strong> {{cat.origin}}</p>
+    <p><strong>Intelligence:</strong> {{cat.intelligence}}/10</p>
+  </ion-card-content>
+
+</ion-card>
